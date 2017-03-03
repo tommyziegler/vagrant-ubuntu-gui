@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: yes
+  become_user: root
+  tasks:
+  - name: Update the repository cache and update package "nginx" to latest version using default release squeeze-backport
+    apt:
+      name: eclipse
+      state: latest
+      update_cache: yes      
